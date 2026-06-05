@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2027 성산일출축제</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Malgun Gothic',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f8fafc;
+color:#333;
+line-height:1.7;
+}
+
+.container{
+width:1200px;
+max-width:95%;
+margin:auto;
+}
+
+header{
+position:fixed;
+top:0;
+width:100%;
+z-index:1000;
+background:rgba(15,23,42,0.9);
+backdrop-filter:blur(10px);
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 0;
+}
+
+.logo{
+color:white;
+font-size:24px;
+font-weight:bold;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:600;
+}
+
+nav a:hover{
+color:#fbbf24;
+}
+
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+overflow:hidden;
+}
+
+.hero-content{
+position:absolute;
+text-align:center;
+color:white;
+z-index:10;
+}
+
+.hero h1{
+font-size:72px;
+margin-bottom:15px;
+text-shadow:0 3px 15px rgba(0,0,0,0.4);
+}
+
+.hero p{
+font-size:22px;
+margin-bottom:10px;
+}
+
+.hero-date{
+display:inline-block;
+margin-top:20px;
+padding:12px 30px;
+background:rgba(255,255,255,0.15);
+border-radius:40px;
+backdrop-filter:blur(5px);
+}
+
+section{
+padding:100px 0;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:60px;
+}
+
+.section-title h2{
+font-size:42px;
+color:#1e3a8a;
+margin-bottom:10px;
+}
+
+.section-title p{
+color:#64748b;
+}
+
+.card-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:18px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card h3{
+margin-bottom:15px;
+color:#1e3a8a;
+}
+
+.info-table{
+width:100%;
+border-collapse:collapse;
+background:white;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.info-table th,
+.info-table td{
+border:1px solid #e2e8f0;
+padding:18px;
+}
+
+.info-table th{
+background:#eff6ff;
+width:220px;
+}
+
+.keyword{
+display:inline-block;
+background:#dbeafe;
+color:#1d4ed8;
+padding:10px 20px;
+border-radius:30px;
+margin:8px;
+font-weight:bold;
+}
+
+.countdown-card{
+max-width:800px;
+margin:auto;
+background:white;
+padding:40px;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.apply-box{
+max-width:700px;
+margin:auto;
+background:white;
+padding:40px;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+input{
+width:100%;
+padding:15px;
+margin-top:12px;
+border:1px solid #cbd5e1;
+border-radius:10px;
+}
+
+button{
+background:#2563eb;
+color:white;
+border:none;
+padding:15px 30px;
+margin-top:20px;
+border-radius:10px;
+cursor:pointer;
+font-size:16px;
+}
+
+button:hover{
+background:#1d4ed8;
+}
+
+footer{
+background:#0f172a;
+color:white;
+padding:50px 0;
+text-align:center;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:42px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+nav ul{
+display:none;
+}
+
+.section-title h2{
+font-size:32px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container">
+<nav>
+
+<div class="logo">
+🌅 성산일출축제
+</div>
+
+<ul>
+<li><a href="#intro">행사소개</a></li>
+<li><a href="#program">프로그램</a></li>
+<li><a href="#countdown">카운트다운</a></li>
+<li><a href="#location">찾아오기</a></li>
+<li><a href="#apply">접수하기</a></li>
+</ul>
+
+</nav>
+</div>
+</header>
+
+<section class="hero">
+
+<svg width="100%" height="100%" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid slice">
+
+<defs>
+
+<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#0f172a"/>
+<stop offset="60%" stop-color="#1e3a8a"/>
+<stop offset="100%" stop-color="#f97316"/>
+</linearGradient>
+
+<radialGradient id="sunGlow">
+<stop offset="0%" stop-color="#fff7ed"/>
+<stop offset="60%" stop-color="#fdba74"/>
+<stop offset="100%" stop-color="#fb923c"/>
+</radialGradient>
+
+</defs>
+
+<rect width="1200" height="500" fill="url(#sky)"/>
+
+<g opacity="0.4">
+
+<line x1="600" y1="250" x2="250" y2="60" stroke="#FDBA74" stroke-width="4"/>
+<line x1="600" y1="250" x2="950" y2="60" stroke="#FDBA74" stroke-width="4"/>
+<line x1="600" y1="250" x2="150" y2="180" stroke="#FDBA74" stroke-width="4"/>
+<line x1="600" y1="250" x2="1050" y2="180" stroke="#FDBA74" stroke-width="4"/>
+
+</g>
+
+<circle cx="600" cy="250" r="90" fill="url(#sunGlow)"/>
+
+<rect x="0" y="330" width="1200" height="170" fill="#2563eb"/>
+
+<path d="
+M250 330
+L430 180
+L560 240
+L650 140
+L800 220
+L950 330
+Z"
+fill="#1e293b"/>
+
+<path d="
+M0 360
+L1200 360
+L1200 500
+L0 500
+Z"
+fill="#0f172a"/>
+
+</svg>
+
+<div class="hero-content">
+
+<h1>2027 성산일출축제</h1>
+
+<p>대한민국에서 가장 먼저 만나는 새해 첫 태양</p>
+
+<div class="hero-date">
+📅 2026.12.31 ~ 2027.01.01 (1박 2일)
+</div>
+
+</div>
+
+</section>
+
+<section id="intro">
+
+<div class="container">
+
+<div class="section-title">
+<h2>행사소개</h2>
+<p>새해 희망과 감동을 함께하는 제주 대표 해맞이 축제</p>
+</div>
+
+<table class="info-table">
+
+<tr>
+<th>행사명</th>
+<td>2027 성산일출축제</td>
+</tr>
+
+<tr>
+<th>행사기간</th>
+<td>2026.12.31 ~ 2027.01.01 (1박 2일)</td>
+</tr>
+
+<tr>
+<th>장소</th>
+<td>성산일출봉 광장 및 주변 일원</td>
+</tr>
+
+<tr>
+<th>주최</th>
+<td>제주특별자치도 · 서귀포시</td>
+</tr>
+
+<tr>
+<th>예산</th>
+<td>5억 원</td>
+</tr>
+
+<tr>
+<th>참가규모</th>
+<td>15,000명</td>
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+<section id="program">
+
+<div class="container">
+
+<div class="section-title">
+<h2>주요 프로그램</h2>
+</div>
+
+<div class="card-grid">
+
+<div class="card">
+<h3>🌅 해맞이 행사</h3>
+<p>성산일출봉에서 새해 첫 태양 감상</p>
+</div>
+
+<div class="card">
+<h3>🎤 신년 콘서트</h3>
+<p>인기가수 및 지역예술인 공연</p>
+</div>
+
+<div class="card">
+<h3>📸 일출 인증 이벤트</h3>
+<p>SNS 해시태그 인증 이벤트</p>
+</div>
+
+<div class="card">
+<h3>🍊 제주 로컬푸드 마켓</h3>
+<p>제주 특산물 전시 및 판매</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="countdown">
+
+<div class="container">
+
+<div class="section-title">
+<h2>새해 카운트다운</h2>
+</div>
+
+<div class="countdown-card">
+
+<h3>🎆 2026.12.31 23:50</h3>
+<p>희망 메시지 낭독 및 카운트다운 퍼포먼스</p>
+
+<hr style="margin:30px 0;">
+
+<h3>🌅 2027.01.01 07:36</h3>
+<p>성산일출봉 해맞이 및 신년 기원 행사</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="location">
+
+<div class="container">
+
+<div class="section-title">
+<h2>찾아오기</h2>
+<p>제주 동부권 대표 관광지 성산일출봉</p>
+</div>
+
+<div style="text-align:center;">
+
+<svg width="700" height="450" viewBox="0 0 700 450">
+
+<rect width="700" height="450" fill="#eef6ff"/>
+
+<path d="
+M120 250
+C160 170 280 120 420 140
+C560 160 620 240 570 300
+C520 360 360 380 230 350
+C140 330 90 290 120 250
+Z"
+fill="#93c5fd"
+stroke="#2563eb"
+stroke-width="4"/>
+
+<polygon
+points="330,180 370,110 410,180"
+fill="#64748b"/>
+
+<text
+x="370"
+y="95"
+font-size="16"
+font-weight="bold"
+text-anchor="middle">
+한라산
+</text>
+
+<circle
+cx="560"
+cy="230"
+r="14"
+fill="#dc2626"/>
+
+<path
+d="
+M560 245
+L550 270
+L570 270
+Z"
+fill="#dc2626"/>
+
+<rect
+x="460"
+y="175"
+width="170"
+height="45"
+rx="8"
+fill="white"/>
+
+<text
+x="545"
+y="205"
+font-size="16"
+font-weight="bold"
+text-anchor="middle">
+성산일출봉
+</text>
+
+<circle
+cx="180"
+cy="220"
+r="8"
+fill="#2563eb"/>
+
+<text
+x="90"
+y="205"
+font-size="15">
+제주국제공항
+</text>
+
+</svg>
+
+<h3>📍 성산일출봉 광장</h3>
+
+<p>
+제주특별자치도 서귀포시 성산읍 성산리 1
+</p>
+
+<p>
+제주국제공항 기준 차량 약 60분 소요
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="apply">
+
+<div class="container">
+
+<div class="section-title">
+<h2>사전 참가 신청</h2>
+</div>
+
+<div class="apply-box">
+
+<input type="text" placeholder="이름">
+
+<input type="email" placeholder="이메일">
+
+<input type="tel" placeholder="연락처">
+
+<input type="number" placeholder="참가인원">
+
+<button>
+참가 신청하기
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+<h2>알아두면 좋은 키워드</h2>
+</div>
+
+<div style="text-align:center;">
+
+<span class="keyword">해맞이 명소</span>
+<span class="keyword">탄소중립 축제</span>
+<span class="keyword">제주 로컬푸드</span>
+<span class="keyword">일출 인증 이벤트</span>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>2027 성산일출축제 추진단</h3>
+
+<p>
+제주특별자치도 · 서귀포시 · 지역관광협의체
+</p>
+
+</footer>
+
+</body>
+</html>
